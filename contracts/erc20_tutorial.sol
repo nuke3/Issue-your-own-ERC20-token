@@ -1,17 +1,20 @@
 pragma solidity ^0.4.24;
 
+//some changes from https://github.com/nuke3
+//Topic of smartcontract, if you want to chnge something in smartcontract go to
+// to  Constructor (lines after 100)
 // ----------------------------------------------------------------------------
 // '0Fucks' token contract
 //
-// Deployed to : 0x5A86f0cafD4ef3ba4f0344C138afcC84bd1ED222
-// Symbol      : 0FUCKS
-// Name        : 0 Fucks Token
+// Deployed to : 0x5A86f0cafD4ef3ba4f0344C138afcC84bd1ED222 //change
+// Symbol      : YC
+// Name        : 0 Your Contract
 // Total supply: 100000000
-// Decimals    : 18
+// Decimals    : 18 //better do not change
 //
 // Enjoy.
 //
-// (c) by Moritz Neto with BokkyPooBah / Bok Consulting Pty Ltd Au 2017. The MIT Licence.
+//The MIT Licence.
 // ----------------------------------------------------------------------------
 
 
@@ -113,12 +116,12 @@ contract FucksToken is ERC20Interface, Owned, SafeMath {
     // Constructor
     // ------------------------------------------------------------------------
     constructor() public {
-        symbol = "0FUCKS";
-        name = "0 Fucks Token";
-        decimals = 18;
-        _totalSupply = 100000000000000000000000000;
-        balances[0x5A86f0cafD4ef3ba4f0344C138afcC84bd1ED222] = _totalSupply;
-        emit Transfer(address(0), 0x5A86f0cafD4ef3ba4f0344C138afcC84bd1ED222, _totalSupply);
+        symbol = "YC"; //change as you wish
+        name = "0 Your Contract"; // change as you wish
+        decimals = 18; // change if only you know what you are doing
+        _totalSupply = 100000000 * 10 ** 18; //change only 100000000
+        balances[0x0000000000000000xxxxxxxxx] = _totalSupply; //change inside [*] to your adress
+        emit Transfer(address(0), 0x00000000000000, _totalSupply); //change 0x000000000 to your adress ETH/ETC
     }
 
 
